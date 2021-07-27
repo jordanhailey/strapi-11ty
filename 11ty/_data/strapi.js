@@ -1,5 +1,13 @@
 const {getAPI} = require('../utils/reqAPI');
-module.exports = {
-  categories: async () => getAPI('/restaurants').then(res=>res),
-  restaurants: async () => getAPI('/restaurants').then(res=>res),
+
+
+
+module.exports = async () => {
+  const 
+    categories = await getAPI('/categories'),
+    restaurants = await getAPI('/restaurants');
+  return {
+    categories,
+    restaurants
+  }
 }

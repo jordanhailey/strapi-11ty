@@ -1,19 +1,10 @@
 ---
-title: Restaurant
-pagination:
-  data: strapi.restaurants
-  size: 1
-  alias: restaurant
-  permalink: 'restaurants/{{ restaurant.id }}/'
+title: Restaurants
+permalink: 'restaurants/'
 ---
+# {{title}}
 
-# {{ restaurant.name }}
+{% for restaurant in strapi.restaurants %}
 
-{{ restaurant.description }}
-
-## Categories
-
-{% for category in restaurant.categories %}
-
-  <li><a href="/categories/{{ category.id }}/">{{ category.name }}</a></li>
+<li><a href="/restaurants/{{ restaurant.id }}/">{{ restaurant.name }}</a></li>
 {% endfor %}
