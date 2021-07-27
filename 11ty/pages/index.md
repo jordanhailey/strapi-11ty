@@ -1,0 +1,5 @@
+---
+permalink: /
+---
+
+# Local is Lekker
