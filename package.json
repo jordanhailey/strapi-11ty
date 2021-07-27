@@ -1,43 +1,17 @@
 {
-  "name": "strapi-11-ty",
-  "private": true,
+  "name": "strapi-11ty",
   "version": "0.1.0",
-  "description": "A Strapi application",
+  "description": "",
   "scripts": {
-    "develop": "strapi develop",
-    "start": "strapi start",
-    "build": "strapi build",
-    "strapi": "strapi"
+    "start": "concurrently 'npm run start:strapi' 'wait-on http://localhost:1337 && npm run start:11ty'",
+    "start:strapi": "npm run develop --prefix strapi/",
+    "start:11ty": "npm run start --prefix 11ty/"
   },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "devDependencies": {
-    "@11ty/eleventy": "^0.12.1",
-    "axios": "^0.21.1",
-    "eleventy-plugin-error-overlay": "^0.1.2",
-    "html-minifier": "^3.5.21"
-  },
-  "dependencies": {
-    "knex": "0.21.18",
-    "sqlite3": "5.0.0",
-    "strapi": "3.6.5",
-    "strapi-admin": "3.6.5",
-    "strapi-connector-bookshelf": "3.6.5",
-    "strapi-plugin-content-manager": "3.6.5",
-    "strapi-plugin-content-type-builder": "3.6.5",
-    "strapi-plugin-email": "3.6.5",
-    "strapi-plugin-i18n": "3.6.5",
-    "strapi-plugin-upload": "3.6.5",
-    "strapi-plugin-users-permissions": "3.6.5",
-    "strapi-utils": "3.6.5"
-  },
-  "author": {
-    "name": "A Strapi developer"
-  },
-  "strapi": {
-    "uuid": "eeb02ea5-5f82-406a-b7c7-6d84c686523f"
-  },
-  "engines": {
-    "node": ">=10.16.0 <=14.x.x",
-    "npm": "^6.0.0"
-  },
-  "license": "MIT"
+    "concurrently": "^6.2.0",
+    "wait-on": "^6.0.0"
+  }
 }
