@@ -2,7 +2,7 @@
 permalink: /
 title: Local is Lekker Spots
 pagination:
-  data: restaurants
+  data: strapi.restaurants
   size: 100
   alias: restaurants
 ---
@@ -15,6 +15,6 @@ Nothing too touristy, just spots that make you feel at home.
 
 <ul>
 {%- for restaurant in restaurants -%}
-  <li><a href="/restaurant/{{ restaurant.id }}/">{{ restaurant.name }}</a></li>
+  <li><a href="/restaurants/{{ restaurant.id }}/">{{ restaurant.name }}</a></li>
 {%- endfor -%}
 </ul>
