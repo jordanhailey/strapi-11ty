@@ -15,6 +15,6 @@ Nothing too touristy, just spots that make you feel at home.
 
 <ul>
 {%- for restaurant in restaurants -%}
-  <li><a href="/restaurants/{{ restaurant.id }}/">{{ restaurant.name }}</a></li>
+  <li><a href="/restaurant/{{ restaurant.id }}/">{{ restaurant.name }}</a></li>
 {%- endfor -%}
 </ul>
