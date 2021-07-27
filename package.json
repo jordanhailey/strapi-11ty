@@ -5,7 +5,8 @@
   "scripts": {
     "start": "concurrently 'npm run start:strapi' 'wait-on http://localhost:1337 && npm run start:11ty'",
     "start:strapi": "npm run develop --prefix strapi/",
-    "start:11ty": "npm run start --prefix 11ty/"
+    "start:11ty": "npm run start --prefix 11ty/",
+    "pnpm:install": "echo;echo '#####';echo './'; pnpm i; echo;echo '#####';echo './strapi'; pnpm i --prefix strapi/; echo;echo '#####';echo './11ty'; pnpm i --prefix 11ty/"
   },
   "keywords": [],
   "author": "",
