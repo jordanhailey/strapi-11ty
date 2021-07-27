@@ -16,7 +16,7 @@ module.exports = (eleventyConfig) => {
     return content;
   });
 	return {
-    dataTemplateEngine: "njk",
+    dataTemplateEngine: "njk", // deprecated in eleventy 1.0, use eleventyComputed or other .js data files
     markdownTemplateEngine: "njk",
     htmlTemplateEngine: "njk",
 		dir: {
